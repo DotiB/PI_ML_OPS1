@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import pandas as pd
 import numpy as np
 
-movies_df = pd.read_csv("D:\Desktop\Henry1#\movies_ETL.csv")
+movies_df = pd.read_csv("movies_ETL.csv")
 ###http://127.0.0.1:8000
 ###uvicorn main:app --reload
 app = FastAPI()
