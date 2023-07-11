@@ -9,13 +9,14 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Message": "Help"}
+    return {"Message": "Hola usuario"}
+
+###Esta funcion toma el parametro Idioma, lo busca en el dataframe y cuenta cuantas movies hay en este idioma
 
 @app.get("/language/{Idioma}")
 
 def peliculas_idioma(Idioma: str):
     movie_q = len(movies_df.loc[movies_df["original_language"] == Idioma].index)
     return {"Idioma": Idioma, "Cantidad_Peliculas": movie_q}
-
 
 
